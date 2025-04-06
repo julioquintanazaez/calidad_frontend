@@ -13,6 +13,7 @@ import { LinkContainer } from "react-router-bootstrap";
 import Login from "./../components/Login";
 import Inicio from "./../components/BtnInicio";
 import logo from '../assets/logo.png'; 
+import CloudWords from '../utils/comentarios/CloudWords';
 
 const BarraMenuesNavegacion = ( props ) => {
 	
@@ -37,6 +38,7 @@ const BarraMenuesNavegacion = ( props ) => {
 									</LinkContainer>
 									)}									
 								</Nav>
+								<CloudWords />
 								<Inicio token={token} redirectUrl="/" />
 								<Login />
 								<Logout />

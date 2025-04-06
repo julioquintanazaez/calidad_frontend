@@ -9,8 +9,9 @@ export const UserProvider = ( props ) => {
 	const [usuarioactual, setUsuarioActual] = useState({});
 	const [roles, setRoles] = useState([]);
 	const [estadoUsuarios, setEstadoUsuarios] = useState("");
-	const [estadoFicheros, setEstadoFicheros] = useState("");
-	
+	const [estadoFicheros, setEstadoFicheros] = useState(""); 
+	const [estadoComentarios, setEstadoComentarios] = useState(""); 
+
 	useEffect(() => {
 		
 		const fetchUsuarioActual = async () =>{
@@ -53,6 +54,7 @@ export const UserProvider = ( props ) => {
 			usuarioactual, roles, handleLogout, 			
 			estadoUsuarios, setEstadoUsuarios,
 			estadoFicheros, setEstadoFicheros,
+			estadoComentarios, setEstadoComentarios,
 		}}>
 			{ props.children }
 		</UserContext.Provider>

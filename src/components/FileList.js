@@ -6,7 +6,9 @@ import { UserContext } from './../context/UserContext';
 import Swal from 'sweetalert2';
 import { BiDownload, BiTrash, BiComment  } from 'react-icons/bi';
 import FileUpload from './../components/FileUpload';
-import SpanConTexto from './../components/SpanConTexto';
+
+import TablaComentarios from "../utils/comentarios/TablaComentarios";
+import CrearComentarioModal from "../utils/comentarios/CrearComentarioModal";
 
 function FileList() {
   
@@ -93,20 +95,21 @@ function FileList() {
                 <hr/>                
               </div>
               <div className="file-actions">
-                <button className="btn btn-success">
-                  <BiComment  />
-                </button>
+                <CrearComentarioModal file={ file } />
                 <button 
                   className="btn btn-success"
                   onClick={() => handleDownload(file.id, file.file_path)}>
                   <BiDownload />
                 </button>
                 {token && (
+                  <>
                   <button 
                     className="btn btn-danger"
                     onClick={() => handleDelete(file.id)}>
                     <BiTrash />
                   </button>
+                  <TablaComentarios file={ file }/>
+                  </>
                 )}
               </div>
             </li>

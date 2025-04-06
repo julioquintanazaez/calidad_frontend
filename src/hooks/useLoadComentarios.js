@@ -2,35 +2,37 @@ import React, { useEffect, useRef, useState, useContext } from 'react';
 import { UserContext } from "../context/UserContext";
 import axios from 'axios'; 
 
-export default function useLoadFicheros(){
+export default function useLoadComentarios( id ){
 	
-	const { estadoFicheros, handleLogout  } = useContext(UserContext);
-	const [ficheros, setFicheros] = useState([]);	
+	const { estadoFicheros, estadoComentarios, handleLogout  } = useContext(UserContext);
+	const [comentarios, setComentarios] = useState([]);	
 	
 	useEffect(() => {
 		
-		const fetchFicheros = async () =>{
+		const fetchComentarios = async ( id ) =>{
 			await axios({
 				method: 'get',
-				url: '/documents/files/',   
+				url: `/comentarios/comentario/${id}/todos/`,   
 				headers: {
 					'accept': 'application/json',
 				},                       
 			}).then(response => {
-				if (response.status === 200) {
+				if (response.status === 201) {
 					console.log(response.data);
-					setFicheros(response.data);
+					setComentarios(response.data);
 				}else {	
+                    setComentarios([]);
 					handleLogout();
 				}
 			}).catch((error) => {
 				console.error({"message":error.message, "detail":error.response.data.detail});
+                handleLogout();
 			});		
 		};		
 		
-		fetchFicheros();
+		fetchComentarios();
 		
-	}, [ estadoFicheros ]);
+	}, [ estadoFicheros, estadoComentarios ]);
 
-	return ficheros;
+	return comentarios;
 };
