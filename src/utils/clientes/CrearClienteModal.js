@@ -99,12 +99,12 @@ export default function CrearClienteModal( props ) {
 	return (
 		<>
 		<button className="btn btn-info" onClick={handleShow}>
-			Datos del usuario
+			Usuario
 		</button>
 		<Modal show={show} onHide={handleClose} size="lm" > 
 			<Modal.Header closeButton className="header-modal">
 				<Modal.Title>
-					Nuevo
+					Datos del usuario
 				</Modal.Title>
 			</Modal.Header>
 			<Modal.Body>

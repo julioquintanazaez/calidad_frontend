@@ -7,6 +7,7 @@ import Swal from 'sweetalert2';
 
 import ActualizarClienteModal from "./../../utils/clientes/ActualizarClienteModal";
 import EliminarCliente from "./../../utils/clientes/EliminarCliente";
+import CrearClienteModal from "./../../utils/clientes/CrearClienteModal";
 
 const ClientesTabla = ( props ) => {
 
@@ -32,6 +33,9 @@ const ClientesTabla = ( props ) => {
 		<div className="col">            	
             <table className="table table-striped table-bordered" responsive="true">
 				<thead className="table-light">
+					<tr>
+						< CrearClienteModal /> 
+					</tr>
 					<tr>
 						<th scope="col">#</th>	
 						<th scope="col">Nombre</th>			

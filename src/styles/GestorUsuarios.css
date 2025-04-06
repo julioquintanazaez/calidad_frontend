@@ -1,0 +1,25 @@
+ /* Estilos para el contenedor principal */
+.contenedor {
+    display: grid;
+    gap: 20px; /* Espacio entre las columnas */
+    padding: 20px;
+    height: 100vh; /* Altura completa de la ventana */
+  }
+  
+  /* Estilos para la tabla */
+  .tabla {
+    width: 100%; /* Ancho completo */
+    border-collapse: collapse; /* Colapsa los bordes */
+  }
+  
+  .tabla th, .tabla td {
+    border: 1px solid #ddd; /* Bordes de las celdas */
+    padding: 8px; /* Espaciado interno */
+    text-align: left; /* Alineación del texto */
+  }
+  
+  .tabla th {
+    background-color: #f2f2f2; /* Color de fondo para los encabezados */
+  }
+  
+  

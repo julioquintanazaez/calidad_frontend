@@ -1,3 +1,4 @@
+import "../styles/PanelUsuarios.css";
 import React, {useState, useEffect, useContext} from 'react';
 import { UserContext } from './../context/UserContext';
 import axios from 'axios';
@@ -10,9 +11,9 @@ const Clientes = () => {
 	
 	return (	
 		<>
-			<h1>Información de los usuarios del sistema</h1>
-			
-			< GestorCliente />
+			<div className="contenedor-usuarios">
+				< GestorCliente />
+			</div>
 		</>
 	);  
 }

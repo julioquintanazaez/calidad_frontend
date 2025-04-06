@@ -12,6 +12,7 @@ import { LinkContainer } from "react-router-bootstrap";
 
 import Login from "./../components/Login";
 import Inicio from "./../components/BtnInicio";
+import logo from '../assets/logo.png'; 
 
 const BarraMenuesNavegacion = ( props ) => {
 	
@@ -23,6 +24,7 @@ const BarraMenuesNavegacion = ( props ) => {
 				<div className="columns">
 					<Navbar collapseOnSelect expand="lg" className="bg-body-tertiary" bg="warning">
 						<Container>
+							<img src={logo} alt="Logo" style={{ height: '50px', marginRight: '20px' }} />
 							<Navbar.Brand href="#inicio">
 								Gestión de calidad
 							</Navbar.Brand>

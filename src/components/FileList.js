@@ -4,8 +4,9 @@ import axios from 'axios';
 
 import { UserContext } from './../context/UserContext';
 import Swal from 'sweetalert2';
-import { BiDownload, BiTrash } from 'react-icons/bi';
+import { BiDownload, BiTrash, BiComment  } from 'react-icons/bi';
 import FileUpload from './../components/FileUpload';
+import SpanConTexto from './../components/SpanConTexto';
 
 function FileList() {
   
@@ -72,9 +73,10 @@ function FileList() {
   if (isLoading) return <p>Cargando archivos...</p>;
   if (error) return <p>{error}</p>;
 
+  //<h5>{file.description || 'Sin descripción'}</h5>
   return (
     <div className="file-list-container">
-      <h4>Archivos Disponibles</h4>
+      <h5>Archivos Disponibles</h5>
       {token && (
       <div className="upload-section">
           <FileUpload />
@@ -87,10 +89,13 @@ function FileList() {
           {files.map((file) => (
             <li key={file.id} className="file-item">
               <div className="file-info">
-                <h3>{file.name}</h3>
-                <p>{file.description || 'Sin descripción'}</p>
+                <h5>{file.name}</h5>
+                <hr/>                
               </div>
               <div className="file-actions">
+                <button className="btn btn-success">
+                  <BiComment  />
+                </button>
                 <button 
                   className="btn btn-success"
                   onClick={() => handleDownload(file.id, file.file_path)}>

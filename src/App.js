@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from 'react';
+import './App.css';
 import { Routes, Route } from 'react-router-dom';
-import axios from 'axios';
 import { ProtectedRoute } from './router/ProtectedRoute';
 import { UserContext } from "./context/UserContext";
 
@@ -8,13 +8,15 @@ import BarraMenuesNavegacion from "./components/BarraMenuesNavegacion";
 import Inicio from './pages/Inicio.js';
 import Usuarios from './pages/Usuarios.js';
 import Muestras from './pages/Muestras.js';
+import Footer from './components/Footer'; 
 
 const App = () => {	
 	
 	const {token, roles} = useContext(UserContext); 
 	
 	return (
-		<>				
+		<div>	
+		<>	
 			<BarraMenuesNavegacion />			
 			{token && (				
 				<div className="columns">							
@@ -31,8 +33,10 @@ const App = () => {
 				<>
 					<Muestras />
 				</>
-			)}		
+			)}	
+			<Footer />
 		</>
+		</div>	
 	);
 };
 

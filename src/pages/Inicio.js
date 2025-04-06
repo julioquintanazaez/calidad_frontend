@@ -11,11 +11,9 @@ const Inicio = () => {
 	const { token, handleLogout } = useContext(UserContext);
 		
 	return (		
-        <div className="grid">
-            <div className="list-section">
-                <FileList />
-            </div>
-        </div>	
+        <div className="list-section">
+            <FileList />
+        </div>
     );  
 
 }

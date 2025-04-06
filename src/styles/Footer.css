@@ -1,0 +1,19 @@
+/* src/components/Footer.css */
+.footer {
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro y semi-transparente */
+    color: white; /* Color del texto */
+    text-align: center; /* Centrar el texto */
+    padding: 20px; /* Espaciado interno */
+    position: relative; /* Posición relativa para el pie de página */
+    bottom: 0; /* Fijar al fondo */
+    width: 100%; /* Ancho completo */
+}
+
+.footer-content {
+    margin-bottom: 10px; /* Margen inferior */
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.5); /* Línea superior */
+    padding-top: 10px; /* Espaciado superior */
+}
