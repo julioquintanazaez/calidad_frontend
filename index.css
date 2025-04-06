@@ -1,0 +1,78 @@
+body{
+	background-color: white;
+}
+.projects-list{
+	font-family: Arial, sans-serif;
+	text-align: center;
+	margin-top: 100px;
+}
+h1{
+	font-size: 4rem;
+}
+.add-button{
+	background-color: hsl(125, 47%, 54%);
+}
+.add-button:hover{
+	background-color: hsl(125, 47%, 44%);
+}
+.delete-button{
+	background-color: hsl(10, 90%, 50%);
+}
+.delete-button:hover{
+	background-color: hsl(10, 90%, 44%);
+}
+.update-button{
+	background-color: hsl(125, 47%, 54%);
+}
+.update-button:hover{
+	background-color: hsl(125, 47%, 44%);
+}
+.detail-button{
+	background-color: hsl(125, 47%, 54%);
+}
+.detail-button:hover{
+	background-color: hsl(125, 47%, 44%);
+}
+.search-button{
+	background-color: hsl(125, 47%, 54%);
+}
+.search-button:hover{
+	background-color: hsl(125, 47%, 44%);
+}
+ol{
+	padding: 0;	
+}
+li{
+	font-size: 1.4rem;
+	font-weight: bold;
+	padding: 5px;
+	background-color: hsl(0, 0%, 97%);
+	margin-bottom: 10px;
+	border: 3px solid hsla(0, 0%, 85%, 0.75);
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+}
+.delete-button, .update-button, .detail-button, .search-button, .add-button{
+	padding: 5px, 12px;
+	font-size: 1.2rem;
+	margin-left: 10px;
+}
+.add-button{
+	margin-top: 12px;
+	margin-bottom: 10px;
+}
+.btn{
+	margin-top: 1.5px;
+	margin-bottom: 1.5px;
+	margin-left: 2px;
+}
+.col-tasks-maneger{
+	background-color: hsl(0, 0%, 97%);
+}
+.col-equipments-maneger{
+	background-color: hsl(0, 0%, 97%);
+}
+.header-modal{
+	background-color: hsl(125, 100%, 47%);
+}

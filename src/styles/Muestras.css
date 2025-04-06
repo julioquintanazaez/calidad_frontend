@@ -1,0 +1,81 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .products-list {
+    flex: 0 0 70%; /* 70% ancho */
+    padding: 10px;
+  }
+  
+  .filtered-products {
+    flex: 0 0 30%; /* 30% ancho */
+    padding: 10px;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Ajusta el tamaño mínimo de las cards */
+    gap: 10px; /* Espacio entre las cards */
+  }
+  
+  .card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px; /* Reducido para adaptarse al nuevo diseño */
+    transition: transform 0.2s;
+    margin: 10px 0;
+    text-align: center; /* Centrar texto */
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+
+  
+.product-image {
+  width: 100%; /* Imagen ocupa todo el ancho de la tarjeta */
+  height: auto; /* Mantiene la proporción */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+.button-container {
+  margin-top: 10px; /* Espacio superior para los botones */
+  display: flex; /* Para alinear los botones */
+  justify-content: flex-end; /* Alinea los botones a la derecha */
+}
+
+.btn {
+  color: white; /* Color del texto */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 8px 12px; /* Espaciado interno */
+  margin: 5px; /* Espacio entre botones */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+.btn.add {
+  background-color: #28a745; /* Fondo verde */
+}
+
+.btn.rest {
+  background-color: #dc3545; /* Fondo rojo */
+}
+
+.btn.add:hover {
+  background-color: #218838; /* Verde más oscuro al pasar el mouse */
+}
+
+.btn.rest:hover {
+  background-color: #c82333; /* Rojo más oscuro al pasar el mouse */
+}
+
+  
+/* Responsive */
+@media (max-width: 768px) {
+  .products-list, .filtered-products {
+    flex: 0 0 100%; /* 100% ancho en pantallas pequeñas */
+  }
+}
+  

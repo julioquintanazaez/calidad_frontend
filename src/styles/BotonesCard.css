@@ -1,0 +1,25 @@
+.btn {
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 8px 12px; /* Espaciado interno */
+    margin: 5px; /* Espacio entre botones */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  }
+  
+  .btn.add {
+    background-color: #28a745; /* Fondo verde */
+  }
+  
+  .btn.rest {
+    background-color: #dc3545; /* Fondo rojo */
+  }
+  
+  .btn.add:hover {
+    background-color: #218838; /* Verde más oscuro al pasar el mouse */
+  }
+  
+  .btn.rest:hover {
+    background-color: #c82333; /* Rojo más oscuro al pasar el mouse */
+  }
+  
