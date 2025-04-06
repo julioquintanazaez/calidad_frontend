@@ -1,0 +1,29 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Una columna */
+  grid-template-rows: 1fr 1fr; /* Dos filas iguales */
+  height: 100vh; /* Altura total de la ventana */
+}
+
+.upload-section,
+.list-section {
+  padding: 20px; /* Espaciado interno */
+  border-radius: 8px; /* Bordes redondeados */
+  background-color: #f9f9f9; /* Color de fondo */
+}
+
+.upload-section {
+  /* Estilo específico para la sección de carga de archivos */
+}
+
+.list-section {
+  /* Estilo específico para la sección de lista de archivos */
+}
+
+/* Responsive para pantallas más grandes */
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr; /* Dos columnas en pantallas más grandes */
+    grid-template-rows: 1fr; /* Una fila */
+  }
+}

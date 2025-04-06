@@ -11,6 +11,7 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import { LinkContainer } from "react-router-bootstrap";
 
 import Login from "./../components/Login";
+import Inicio from "./../components/BtnInicio";
 
 const BarraMenuesNavegacion = ( props ) => {
 	
@@ -34,6 +35,7 @@ const BarraMenuesNavegacion = ( props ) => {
 									</LinkContainer>
 									)}									
 								</Nav>
+								<Inicio token={token} redirectUrl="/" />
 								<Login />
 								<Logout />
 							</Navbar.Collapse>

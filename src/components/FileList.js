@@ -1,8 +1,11 @@
+import "../styles/Documentspanel.css";
 import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 
 import { UserContext } from './../context/UserContext';
 import Swal from 'sweetalert2';
+import { BiDownload, BiTrash } from 'react-icons/bi';
+import FileUpload from './../components/FileUpload';
 
 function FileList() {
   
@@ -70,22 +73,37 @@ function FileList() {
   if (error) return <p>{error}</p>;
 
   return (
-    <div>
-      <h2>Archivos Disponibles</h2>
+    <div className="file-list-container">
+      <h4>Archivos Disponibles</h4>
+      {token && (
+      <div className="upload-section">
+          <FileUpload />
+      </div>
+      )}
       {files.length === 0 ? (
         <p>No hay archivos disponibles</p>
       ) : (
-        <ul>
+        <ul className="file-list">
           {files.map((file) => (
-            <li key={file.id}>
-              <h3>{file.name}</h3>
-              <p>{file.description || 'Sin descripción'}</p>
-              <button onClick={() => handleDownload(file.id, file.file_path)}>
-                Descargar
-              </button>
-              <button onClick={() => handleDelete(file.id)}>
-                Eliminar
-              </button>
+            <li key={file.id} className="file-item">
+              <div className="file-info">
+                <h3>{file.name}</h3>
+                <p>{file.description || 'Sin descripción'}</p>
+              </div>
+              <div className="file-actions">
+                <button 
+                  className="btn btn-success"
+                  onClick={() => handleDownload(file.id, file.file_path)}>
+                  <BiDownload />
+                </button>
+                {token && (
+                  <button 
+                    className="btn btn-danger"
+                    onClick={() => handleDelete(file.id)}>
+                    <BiTrash />
+                  </button>
+                )}
+              </div>
             </li>
           ))}
         </ul>

@@ -61,10 +61,9 @@ function FileUpload() {
 	}
 
   return (
-
     <>
 		<button className="btn btn-info" onClick={handleShow}>
-      Subir Archivo de Texto
+      Nueva documentación
 		</button>
 		<Modal show={show} onHide={handleClose} size="lm" > 
 			<Modal.Header closeButton className="header-modal">
