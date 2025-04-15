@@ -7,8 +7,10 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-content">
         <h3>Información de Contacto</h3>
-        <p>Creadores: Yaimi Sifonte</p>
-        <p>Dirección del Hotel: Calle Ficticia 123, Ciudad, País</p>
+        <p>Creadores: Yaimi Sifonte Marty</p>
+        <p>Cargo: Encargada de calidad</p>
+        <p>Teléfono: </p>
+        <p>Dirección del Hotel: Playa Hermosa, Cayo Paredón, Ciego de Ávila, Cuba</p>
         <p>Referencia: www.ejemplo.com</p>
       </div>
       <div className="footer-bottom">

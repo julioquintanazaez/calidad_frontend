@@ -4,11 +4,12 @@ import axios from 'axios';
 
 import { UserContext } from './../context/UserContext';
 import Swal from 'sweetalert2';
-import { BiDownload, BiTrash, BiComment  } from 'react-icons/bi';
+import { BiDownload, BiTrash  } from 'react-icons/bi';
 import FileUpload from './../components/FileUpload';
 
-import TablaComentarios from "../utils/comentarios/TablaComentarios";
+//import TablaComentarios from "../utils/comentarios/TablaComentarios";
 import CrearComentarioModal from "../utils/comentarios/CrearComentarioModal";
+import DataTable from "./DataTable";
 
 function FileList() {
   
@@ -108,7 +109,7 @@ function FileList() {
                     onClick={() => handleDelete(file.id)}>
                     <BiTrash />
                   </button>
-                  <TablaComentarios file={ file }/>
+                  <DataTable file={ file } />
                   </>
                 )}
               </div>

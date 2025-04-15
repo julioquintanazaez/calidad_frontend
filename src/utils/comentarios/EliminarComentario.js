@@ -24,6 +24,7 @@ export default function EliminarComentario  ( props ) {
 				console.log("Comentario eliminado satisfactoriamente");		
 				setEstadoComentarios("Comentario eliminado satisfactoriamente" + Math.random());
 				Swal.fire("Comentario eliminado satisfactoriamente", "", "success");
+				closeValue()
                 //props.setShow(False);
 			}
 		}).catch((error) => {
@@ -40,6 +41,10 @@ export default function EliminarComentario  ( props ) {
 			Swal.fire("Seleccione un comentario para eliminar", "", "success");	
 		}
 	}
+
+	const closeValue = () => {
+		props.onClose(false); 
+	};
 	
 	return (	
 		<>			
